@@ -65,7 +65,7 @@ public class PubSubToBQ {
                         .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND)
                         .withCreateDisposition(BigQueryIO.Write.CreateDisposition.CREATE_IF_NEEDED));
 
-        unparsedCollection.apply("write to dlq",PubsubIO.writeStrings().to("projects/nttdata-c4e-bde/topics/uc1-dlq-topic-7"));
+        unparsedCollection.apply("write to dlq",PubsubIO.writeStrings().to(""));
         return p.run(); 
     }
 
